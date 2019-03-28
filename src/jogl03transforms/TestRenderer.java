@@ -95,7 +95,9 @@ public class TestRenderer implements GLEventListener, MouseListener,
 		switch (mode) {
 		case 0:
 			// rotace postupnou upravou matice
-			gl.glRotatef(1, 0, 0, 1);
+			gl.glTranslatef(5,5,0);//posun do pocatku
+			gl.glRotatef(1, 0, 0, 1);//otoc
+			gl.glTranslatef(-5,-5,0);//vrat zpatky
 
 			break;
 		case 1:
