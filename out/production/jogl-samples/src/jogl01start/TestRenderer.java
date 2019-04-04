@@ -82,7 +82,7 @@ public class TestRenderer implements GLEventListener, MouseListener,
 		// gl.glViewport(width/4,height/4,width/2,height/2);
 		// gl.glViewport(-width/4,-height/4,width*2,height*2);
 
-		/*
+
 		// nastaveni viewportu bez deformace obrazu, zachovan pomer vyska/sirka
 		int w = width;
 		int h = height;
@@ -93,7 +93,7 @@ public class TestRenderer implements GLEventListener, MouseListener,
 		else
 			h = (int) (w / s);
 		gl.glViewport(0, 0, w, h);
-		*/
+
 	}
 
 	/*
