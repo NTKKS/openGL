@@ -13,6 +13,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
 
+import transforms.Point3D;
+import transforms.Vec3D;
 import utils.OglUtils;
 
 public class Renderer implements GLEventListener, MouseListener, MouseMotionListener, KeyListener {
@@ -29,6 +31,11 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     int width, height, dx, dy, ox, oy;
 
     float uhel = 0;
+
+    Emitter emitter;
+    Particle particle;
+    float time = 0;
+    int sec = 0;
 
 
     @Override
@@ -59,6 +66,10 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
 
         gl.glLoadIdentity();
         gl.glGetFloatv(GL2.GL_MODELVIEW_MATRIX, m, 0);
+
+        emitter = new Emitter(new Point3D(0,0,0),new Vec3D(0,0,1),5,5, 4);
+        particle = new Particle(emitter.getPosition(),emitter.getSpeed(),"Point",1);
+
     }
 
     @Override
@@ -78,6 +89,9 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         // prekresleni
         // (frame)
         oldmils = mils;
+
+        time += fps*0.001;
+        //System.out.println(time);
 
         gl.glEnable(gl.GL_DEPTH_TEST);
 
@@ -124,10 +138,12 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         // emitter
         gl.glColor3f(1.0f,1.0f,0.0f);
         gl.glBegin(GL2.GL_LINE_LOOP);
-        gl.glVertex3f(-2.5f, 2.5f, 0.0f);
-        gl.glVertex3f(-2.5f, -2.5f, 0.0f);
-        gl.glVertex3f(2.5f, -2.5f, 0.0f);
-        gl.glVertex3f(2.5f, 2.5f, 0.0f);
+        float sz = emitter.getSize()/2;
+        Point3D pos = emitter.getPosition();
+        gl.glVertex3f(-1.0f*sz+(float) pos.getX(), 1.0f*sz+(float)pos.getY(), 0.0f);
+        gl.glVertex3f(-1.0f*sz+(float) pos.getX(), -1.0f*sz+(float)pos.getY(), 0.0f);
+        gl.glVertex3f(1.0f*sz+(float) pos.getX(), -1.0f*sz+(float)pos.getY(), 0.0f);
+        gl.glVertex3f(1.0f*sz+(float) pos.getX(), 1.0f*sz+(float)pos.getY(), 0.0f);
         gl.glEnd();
 
         // XYZ axis
@@ -144,14 +160,36 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         gl.glEnd();
 
         // DUMMY
-        uhel = (uhel + step)% 20;
+
+        Point3D ptPos = particle.getPosition();
+
         gl.glColor3f(1.0f,0.0f,0.0f);
-        gl.glBegin(GL2ES3.GL_QUADS);
-        gl.glVertex3f(-2.5f, 2.5f, uhel);
-        gl.glVertex3f(-2.5f, -2.5f, uhel);
-        gl.glVertex3f(2.5f, -2.5f, uhel);
-        gl.glVertex3f(2.5f, 2.5f, uhel);
+        gl.glBegin(GL2.GL_QUADS);
+        gl.glVertex3f(-2.5f, 2.5f, (float)ptPos.getZ());
+        gl.glVertex3f(-2.5f, -2.5f, (float)ptPos.getZ());
+        gl.glVertex3f(2.5f, -2.5f, (float)ptPos.getZ());
+        gl.glVertex3f(2.5f, 2.5f, (float)ptPos.getZ());
         gl.glEnd();
+
+        particle.setPosition(new Point3D(ptPos.getX(),ptPos.getY(),ptPos.getZ()+0.2));
+        particle.setAge(particle.getAge()+fps*0.001);
+        if (particle.getAge()>emitter.getParticleDie()){
+            particle.setAge(0);
+            particle.setPosition(emitter.getPosition());
+        }
+
+        if (sec!=(int)time&&emitter.getCount()>0){
+            System.out.println(emitter.getCount());
+            emitter.setCount(emitter.getCount()-1);
+        }
+
+        gl.glColor3f(1.0f,1.0f,0.0f);
+        gl.glPointSize(5.0f);
+        gl.glBegin(GL2.GL_POINTS);
+        gl.glVertex3f(3.0f, 3.0f,(float)ptPos.getZ());
+        gl.glEnd();
+
+        sec = (int)time;
 
         //.........................................................
     }

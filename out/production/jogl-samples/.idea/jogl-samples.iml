@@ -13,18 +13,22 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../jogamp-all-platforms/jar/jogl-all.jar!/" />
+          <root url="file://$MODULE_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar" recursive="false" />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../jogamp-all-platforms/jar/gluegen-rt.jar!/" />
+          <root url="file://$MODULE_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar" recursive="false" />
       </library>
     </orderEntry>
   </component>

@@ -2,37 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1545e23a-99d4-416a-a5ba-72af168a291a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/particleSystem/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/particleSystem/Emitter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/particleSystem/Renderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/particleSystem/Particle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/particleSystem/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jogl-samples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jogl-samples.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/.idea/jogl-samples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/.idea/jogl-samples.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl01start/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl01start/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl01start/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl01start/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl02elements/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl02elements/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl02elements/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl02elements/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl03transforms/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl03transforms/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl03transforms/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl03transforms/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl04light/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl04light/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl04light/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl04light/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl05texture/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl05texture/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl05texture/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl05texture/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl06pushpopclip/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl06pushpopclip/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl06pushpopclip/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl06pushpopclip/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl07viewport/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl07viewport/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl07viewport/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl07viewport/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl08camerasky/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl08camerasky/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl08camerasky/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl08camerasky/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl09objectarrays/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl09objectarrays/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl09objectarrays/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl09objectarrays/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl10directionlight/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl10directionlight/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl10directionlight/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl10directionlight/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/src/jogl01start/TestRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/src/jogl01start/TestRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/src/jogl03transforms/TestRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/src/jogl03transforms/TestRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/particleSystem/Emitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/particleSystem/Emitter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/particleSystem/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/particleSystem/Renderer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +49,34 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1319890138">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="2147" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="2147" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
@@ -84,8 +89,6 @@
                   <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1536#1791#0" expanded="true" />
-                    <element signature="e#1790#1791#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -94,11 +97,25 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/particleSystem/Renderer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
-                  <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
+                <state relative-caret-position="470">
+                  <caret line="182" column="49" selection-start-line="182" selection-start-column="49" selection-end-line="182" selection-end-column="49" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#2053#2067#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/particleSystem/World.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="400">
+                  <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#174#175#0" expanded="true" />
+                    <element signature="e#228#229#0" expanded="true" />
+                    <element signature="e#343#344#0" expanded="true" />
+                    <element signature="e#375#376#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -107,8 +124,58 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/particleSystem/Emitter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+                <state relative-caret-position="514">
+                  <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#214#215#0" expanded="true" />
+                    <element signature="e#245#246#0" expanded="true" />
+                    <element signature="e#294#295#0" expanded="true" />
+                    <element signature="e#334#335#0" expanded="true" />
+                    <element signature="e#365#366#0" expanded="true" />
+                    <element signature="e#393#394#0" expanded="true" />
+                    <element signature="e#764#765#0" expanded="true" />
+                    <element signature="e#791#792#0" expanded="true" />
+                    <element signature="e#817#818#0" expanded="true" />
+                    <element signature="e#845#846#0" expanded="true" />
+                    <element signature="e#914#915#0" expanded="true" />
+                    <element signature="e#434#435#0" expanded="true" />
+                    <element signature="e#468#469#0" expanded="true" />
+                    <element signature="e#564#565#0" expanded="true" />
+                    <element signature="e#598#599#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/particleSystem/Particle.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="171">
+                  <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#264#265#0" expanded="true" />
+                    <element signature="e#295#296#0" expanded="true" />
+                    <element signature="e#411#412#0" expanded="true" />
+                    <element signature="e#437#438#0" expanded="true" />
+                    <element signature="e#533#534#0" expanded="true" />
+                    <element signature="e#561#562#0" expanded="true" />
+                    <element signature="e#668#669#0" expanded="true" />
+                    <element signature="e#696#697#0" expanded="true" />
+                    <element signature="e#803#804#0" expanded="true" />
+                    <element signature="e#830#831#0" expanded="true" />
+                    <element signature="e#472#473#0" expanded="true" />
+                    <element signature="e#502#503#0" expanded="true" />
+                    <element signature="e#602#603#0" expanded="true" />
+                    <element signature="e#636#637#0" expanded="true" />
+                    <element signature="e#738#739#0" expanded="true" />
+                    <element signature="e#772#773#0" expanded="true" />
+                    <element signature="e#870#871#0" expanded="true" />
+                    <element signature="e#902#903#0" expanded="true" />
+                    <element signature="e#1094#1095#0" expanded="true" />
+                    <element signature="e#1134#1135#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -116,12 +183,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/jogl03transforms/TestRenderer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1156">
-                  <caret line="125" column="38" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="38" />
+                <state relative-caret-position="74">
+                  <caret line="71" column="52" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="52" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -129,11 +196,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/jogl07viewport/TestRenderer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1292">
+                <state relative-caret-position="20">
                   <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/jogl04light/JOGLApp.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="20">
+                  <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -159,6 +235,9 @@
         <option value="$PROJECT_DIR$/src/particleSystem/Applet.java" />
         <option value="$PROJECT_DIR$/src/particleSystem/App.java" />
         <option value="$PROJECT_DIR$/src/jogl03transforms/TestRenderer.java" />
+        <option value="$PROJECT_DIR$/src/particleSystem/World.java" />
+        <option value="$PROJECT_DIR$/src/particleSystem/Emitter.java" />
+        <option value="$PROJECT_DIR$/src/particleSystem/Particle.java" />
         <option value="$PROJECT_DIR$/src/particleSystem/Renderer.java" />
       </list>
     </option>
@@ -179,35 +258,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Course" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="openGL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="openGL" type="462c0819:PsiDirectoryNode" />
+              <item name="openGL2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openGL2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="openGL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="openGL" type="462c0819:PsiDirectoryNode" />
+              <item name="openGL2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openGL2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="openGL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="openGL" type="462c0819:PsiDirectoryNode" />
+              <item name="openGL2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openGL2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="jogl03transforms" type="462c0819:PsiDirectoryNode" />
+              <item name="jogl09objectarrays" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="openGL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="openGL" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="jogl07viewport" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="openGL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="openGL" type="462c0819:PsiDirectoryNode" />
+              <item name="openGL2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openGL2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="particleSystem" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -215,14 +288,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="sett&#9;ACTION&#9;Database.Settings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554389562084" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jogamp-all-platforms/jar/gluegen-rt.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554727142085" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -302,17 +376,18 @@
       <workItem from="1553083058317" duration="2493000" />
       <workItem from="1554374893673" duration="84000" />
       <workItem from="1554374991544" duration="12178000" />
+      <workItem from="1554668000607" duration="9921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14755000" />
+    <option name="totallyTimeSpent" value="24676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.122068234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12313433" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -321,7 +396,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1735358" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.1735358" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.14642082" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -330,8 +405,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286334" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.1735358" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.3286334" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -372,16 +447,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/particleSystem/Applet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/particleSystem/Applet.java" />
     <entry file="file://$PROJECT_DIR$/src/jogl01start/TestRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -389,13 +455,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../jogamp-all-platforms/jar/jogl-all.jar!/jogamp/opengl/gl4/GL4bcImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14235">
-          <caret line="1205" column="52" selection-start-line="1205" selection-start-column="52" selection-end-line="1205" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jogamp-all-platforms/jar/jogl-all.jar!/jogamp/opengl/gl4/GL4bcImpl.class" />
     <entry file="file://$PROJECT_DIR$/src/jogl03transforms/JOGLApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -404,35 +464,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1422#1664#0" expanded="true" />
             <element signature="e#1663#1664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/particleSystem/Emitter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/particleSystem/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1536#1791#0" expanded="true" />
-            <element signature="e#1790#1791#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogl03transforms/TestRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="125" column="38" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -446,18 +477,119 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jogl07viewport/TestRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1292">
+        <state relative-caret-position="20">
           <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/particleSystem/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogl04light/JOGLApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogl09objectarrays/TestRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10320">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/particleSystem/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding>
+            <element signature="e#174#175#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogl03transforms/TestRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="71" column="52" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/particleSystem/Emitter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#214#215#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/particleSystem/Particle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#533#534#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#803#804#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#902#903#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/particleSystem/Renderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
+        <state relative-caret-position="470">
+          <caret line="182" column="49" selection-start-line="182" selection-start-column="49" selection-end-line="182" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2053#2067#0" />
           </folding>
         </state>
       </provider>
