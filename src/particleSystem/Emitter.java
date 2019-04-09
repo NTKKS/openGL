@@ -11,6 +11,7 @@ public class Emitter {
     private int count;
     private float size;
     private int particleDie;
+    private String shape;
 
     public Emitter(Point3D position, Vec3D speed, int count, float size, int particleDie) {
         this.position = position;
@@ -18,6 +19,15 @@ public class Emitter {
         this.count = count;
         this.size = size;
         this.particleDie = particleDie;
+    }
+
+    public Emitter() {
+        position = new Point3D(0,0,0);
+        speed = new Vec3D(0,0,0.5);
+        count = 20;
+        size = 5;
+        particleDie = 2;
+        shape = "Point";
     }
 
     public Point3D getPosition() {
@@ -51,4 +61,21 @@ public class Emitter {
     public void setCount(int count) {
         this.count = count;
     }
+
+    public void setSize(float size) {
+        this.size = size;
+    }
+
+    public void setParticleDie(int particleDie) {
+        this.particleDie = particleDie;
+    }
+
+    public String getShape() {
+        return shape;
+    }
+
+    public void setShape(String shape) {
+        this.shape = shape;
+    }
+
 }

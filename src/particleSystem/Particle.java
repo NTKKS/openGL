@@ -1,5 +1,6 @@
 package particleSystem;
 
+import transforms.Col;
 import transforms.Point3D;
 import transforms.Vec3D;
 
@@ -10,6 +11,7 @@ public class Particle {
     private Vec3D speed;
     private String shape;
     private double size;
+    private Col color;
 
     public Particle(Point3D position, Vec3D speed, String shape, double size) {
         this.position = position;
@@ -17,6 +19,7 @@ public class Particle {
         this.speed = speed;
         this.shape = shape;
         this.size = size;
+        color = new Col(1.0f,1.0f,0.0f,1.0f);
     }
 
     public Point3D getPosition() {
@@ -57,5 +60,9 @@ public class Particle {
 
     public void setPosition(Point3D position) {
         this.position = position;
+    }
+
+    public Col getColor() {
+        return color;
     }
 }

@@ -4,20 +4,13 @@ import transforms.Vec3D;
 
 public class World {
 
-    private long timeStart;
-    private long timeNow;
-    private Vec3D gravity;
+    private final Vec3D GRAVITY = new Vec3D(0,0,-0.005);
 
     public World() {
-        timeStart = System.currentTimeMillis()/1000;
     }
 
-    public long getTimeNow() {
-        timeNow = (System.currentTimeMillis()-timeStart)/1000;
-        return timeNow;
+    public Vec3D getGRAVITY() {
+        return GRAVITY;
     }
 
-    public long getTimeStart() {
-        return timeStart;
-    }
 }

@@ -1,7 +1,6 @@
 package particleSystem;
 
 import com.jogamp.opengl.GL2;
-import com.jogamp.opengl.GL2ES3;
 import com.jogamp.opengl.GLAutoDrawable;
 import com.jogamp.opengl.GLEventListener;
 import com.jogamp.opengl.glu.GLU;
@@ -12,6 +11,8 @@ import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 import transforms.Point3D;
 import transforms.Vec3D;
@@ -34,6 +35,9 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
 
     Emitter emitter;
     Particle particle;
+    List<Particle> particles;
+    World world;
+    Vec3D gravity;
     float time = 0;
     int sec = 0;
 
@@ -41,15 +45,14 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     @Override
     public void init(GLAutoDrawable glDrawable) {
         GL2 gl = glDrawable.getGL().getGL2();
+        glut = new GLUT();
+        glu = new GLU();
 
         System.out.println("Init GL is " + gl.getClass().getName());
         System.out.println("GL_VENDOR " + gl.glGetString(GL2.GL_VENDOR)); // vyrobce
         System.out.println("GL_RENDERER " + gl.glGetString(GL2.GL_RENDERER)); // graficka karta
         System.out.println("GL_VERSION " + gl.glGetString(GL2.GL_VERSION)); // verze OpenGL
         System.out.println("GL_EXTENSIONS " + gl.glGetString(GL2.GL_EXTENSIONS)); // implementovana rozsireni
-
-        glut = new GLUT();
-        glu = new GLU();
 
         OglUtils.printOGLparameters(gl);
 
@@ -67,8 +70,13 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         gl.glLoadIdentity();
         gl.glGetFloatv(GL2.GL_MODELVIEW_MATRIX, m, 0);
 
-        emitter = new Emitter(new Point3D(0,0,0),new Vec3D(0,0,1),5,5, 4);
-        particle = new Particle(emitter.getPosition(),emitter.getSpeed(),"Point",1);
+
+        world = new World();
+        gravity = world.getGRAVITY();
+        particles = new ArrayList<>();
+        //emitter = new Emitter(new Point3D(0,0,0),new Vec3D(0,0,1),5,5, 4);
+        emitter = new Emitter();
+        //particle = new Particle(emitter.getPosition(),emitter.getSpeed(),"Point",1);
 
     }
 
@@ -76,6 +84,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     public void display(GLAutoDrawable glDrawable) {
 
         GL2 gl = glDrawable.getGL().getGL2();
+
 
         // vypocet fps, nastaveni rychlosti otaceni podle rychlosti prekresleni
         long mils = System.currentTimeMillis();
@@ -90,8 +99,8 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         // (frame)
         oldmils = mils;
 
-        time += fps*0.001;
-        //System.out.println(time);
+        time += fps*0.005;
+        System.out.println(time);
 
         gl.glEnable(gl.GL_DEPTH_TEST);
 
@@ -109,14 +118,6 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         gl.glGetFloatv(GL2.GL_MODELVIEW_MATRIX, m, 0);
         dx = 0;
         dy = 0;
-
-        /*
-        // nastavení pohybu particlu
-        gl.glMatrixMode(GL2.GL_MODELVIEW);
-        uhel = (uhel + step)% 20;
-        System.out.println(uhel);
-        gl.glTranslatef(0.0f,0.0f,uhel);
-        */
 
         // nastaveni projekce
         gl.glMatrixMode(GL2.GL_PROJECTION);
@@ -161,6 +162,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
 
         // DUMMY
 
+        /*
         Point3D ptPos = particle.getPosition();
 
         gl.glColor3f(1.0f,0.0f,0.0f);
@@ -177,21 +179,51 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             particle.setAge(0);
             particle.setPosition(emitter.getPosition());
         }
+        */
 
-        if (sec!=(int)time&&emitter.getCount()>0){
-            System.out.println(emitter.getCount());
-            emitter.setCount(emitter.getCount()-1);
+        //create particle every second
+        if (sec!=(int)time&&particles.size()<emitter.getCount()){
+            addParticle();
+        }
+        //for every particle do
+        for (int i = 0; i <particles.size() ; i++) {
+
+            Particle p = particles.get(i);
+            //draw particle
+            gl.glColor3d(p.getColor().getR(),p.getColor().getG(),p.getColor().getB());
+            gl.glPointSize(emitter.getSize());
+            gl.glBegin(GL2.GL_POINTS);
+            Point3D pPos = p.getPosition();
+            gl.glVertex3f((float)pPos.getX(), (float)pPos.getY(),(float)pPos.getZ());
+            gl.glEnd();
+            //change speed, apply gravity
+            Vec3D newSpeed = p.getSpeed().add(gravity);
+            p.setSpeed(newSpeed);
+            Point3D actual = p.getPosition();
+            p.setPosition(new Point3D(actual.getX()+newSpeed.getX(),actual.getY()+newSpeed.getY(),actual.getZ()+newSpeed.getZ()));
+            //particle die
+            p.setAge(p.getAge()+fps*0.001);
+            if (p.getAge()>emitter.getParticleDie()){
+                p.setAge(0);
+                p.setPosition(emitter.getPosition());
+                p.setSpeed(emitter.getSpeed());
+            }
         }
 
+        /*
         gl.glColor3f(1.0f,1.0f,0.0f);
         gl.glPointSize(5.0f);
         gl.glBegin(GL2.GL_POINTS);
         gl.glVertex3f(3.0f, 3.0f,(float)ptPos.getZ());
         gl.glEnd();
-
+        */
         sec = (int)time;
 
         //.........................................................
+    }
+
+    private void addParticle() {
+        particles.add(new Particle(emitter.getPosition(),emitter.getSpeed(),emitter.getShape(),emitter.getSize()));
     }
 
     @Override

@@ -58,6 +58,8 @@ public class App {
             testFrame.pack();
             testFrame.setVisible(true);
             animator.start(); // start the animation loop
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
