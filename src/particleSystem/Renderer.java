@@ -1,8 +1,6 @@
 package particleSystem;
 
-import com.jogamp.opengl.GL2;
-import com.jogamp.opengl.GLAutoDrawable;
-import com.jogamp.opengl.GLEventListener;
+import com.jogamp.opengl.*;
 import com.jogamp.opengl.glu.GLU;
 import com.jogamp.opengl.util.gl2.GLUT;
 
@@ -11,9 +9,13 @@ import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.jogamp.opengl.util.texture.Texture;
+import com.jogamp.opengl.util.texture.TextureIO;
 import transforms.Point3D;
 import transforms.Vec3D;
 import utils.OglUtils;
@@ -40,6 +42,8 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     Vec3D gravity;
     float time = 0;
     int sec = 0;
+
+    Texture texture;
 
 
     @Override
@@ -78,6 +82,16 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         emitter = new Emitter();
         //particle = new Particle(emitter.getPosition(),emitter.getSpeed(),"Point",1);
 
+        System.out.println("Loading texture...");
+        InputStream is = getClass().getResourceAsStream("/flame_grad.jpg"); // vzhledem k adresari res v projektu
+        if (is == null)
+            System.out.println("File not found");
+        else
+            try {
+                texture = TextureIO.newTexture(is, true, "jpg");
+            } catch (GLException | IOException e) {
+                e.printStackTrace();
+            }
     }
 
     @Override
@@ -100,7 +114,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         oldmils = mils;
 
         time += fps*0.005;
-        System.out.println(time);
+        //System.out.println(time);
 
         gl.glEnable(gl.GL_DEPTH_TEST);
 
@@ -131,8 +145,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
 
         // pohledova transformace
         // divame se do sceny z kladne osy x, osa z je svisla
-        glu.gluLookAt(50, 25, 20, 0, 0, 0, 0, 0, 1);
-
+        glu.gluLookAt(50, 25, 20, 0, 0, 5, 0, 0, 1);
 
         // GEOMETRY ............................................
 
@@ -160,38 +173,34 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         gl.glVertex3f(0.0f, 0.0f, 50.0f);
         gl.glEnd();
 
-        // DUMMY
-
-        /*
-        Point3D ptPos = particle.getPosition();
-
-        gl.glColor3f(1.0f,0.0f,0.0f);
-        gl.glBegin(GL2.GL_QUADS);
-        gl.glVertex3f(-2.5f, 2.5f, (float)ptPos.getZ());
-        gl.glVertex3f(-2.5f, -2.5f, (float)ptPos.getZ());
-        gl.glVertex3f(2.5f, -2.5f, (float)ptPos.getZ());
-        gl.glVertex3f(2.5f, 2.5f, (float)ptPos.getZ());
-        gl.glEnd();
-
-        particle.setPosition(new Point3D(ptPos.getX(),ptPos.getY(),ptPos.getZ()+0.2));
-        particle.setAge(particle.getAge()+fps*0.001);
-        if (particle.getAge()>emitter.getParticleDie()){
-            particle.setAge(0);
-            particle.setPosition(emitter.getPosition());
-        }
-        */
+        // PARTICLES
 
         //create particle every second
         if (sec!=(int)time&&particles.size()<emitter.getCount()){
             addParticle();
+            System.out.println(particles.size());
         }
         //for every particle do
         for (int i = 0; i <particles.size() ; i++) {
 
             Particle p = particles.get(i);
             //draw particle
-            gl.glColor3d(p.getColor().getR(),p.getColor().getG(),p.getColor().getB());
+
+            //Texture setup
+            gl.glEnable(GL2.GL_TEXTURE_2D);
+            gl.glDisable(GL2.GL_LIGHTING);
+            gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_MODE, GL2.GL_REPLACE);
+            gl.glTexCoord2f((float) (p.getAge()/emitter.getParticleDie()),1.0f);
+
+            gl.glEnable(GL.GL_BLEND);
+            gl.glBlendFunc(GL.GL_SRC_ALPHA,GL.GL_ONE);
+            gl.glDisable(GL.GL_DEPTH_TEST);
+            //.................................
+
+            //gl.glColor3d(p.getColor(texture).getR(),p.getColor(texture).getG(),p.getColor(texture).getB());
             gl.glPointSize(emitter.getSize());
+            //gl.glPointSize(20);
+            gl.glEnable(GL2.GL_POINT_SMOOTH);
             gl.glBegin(GL2.GL_POINTS);
             Point3D pPos = p.getPosition();
             gl.glVertex3f((float)pPos.getX(), (float)pPos.getY(),(float)pPos.getZ());
@@ -205,9 +214,13 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             p.setAge(p.getAge()+fps*0.001);
             if (p.getAge()>emitter.getParticleDie()){
                 p.setAge(0);
-                p.setPosition(emitter.getPosition());
-                p.setSpeed(emitter.getSpeed());
+                p.setPosition(emitter.getRndPos(5));
+                p.setSpeed(emitter.getRndSpeed());
             }
+
+            gl.glBlendFunc(GL.GL_SRC_ALPHA,GL.GL_ONE_MINUS_SRC_ALPHA);
+            gl.glEnable(GL.GL_DEPTH_TEST);
+            gl.glDisable(GL2.GL_TEXTURE_2D);
         }
 
         /*
@@ -223,7 +236,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     }
 
     private void addParticle() {
-        particles.add(new Particle(emitter.getPosition(),emitter.getSpeed(),emitter.getShape(),emitter.getSize()));
+        particles.add(new Particle(emitter.getRndPos(5),emitter.getRndSpeed(),emitter.getShape(),emitter.getSize()));
     }
 
     @Override

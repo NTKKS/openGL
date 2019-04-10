@@ -1,5 +1,6 @@
 package particleSystem;
 
+import com.jogamp.opengl.util.texture.Texture;
 import transforms.Col;
 import transforms.Point3D;
 import transforms.Vec3D;
@@ -62,7 +63,8 @@ public class Particle {
         this.position = position;
     }
 
-    public Col getColor() {
+    public Col getColor(Texture tex) {
+        Col flame = new Col();
         return color;
     }
 }

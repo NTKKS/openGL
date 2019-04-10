@@ -1,8 +1,9 @@
 package particleSystem;
 
-import com.jogamp.opengl.GL2;
 import transforms.Point3D;
 import transforms.Vec3D;
+
+import java.util.Random;
 
 public class Emitter {
 
@@ -12,6 +13,8 @@ public class Emitter {
     private float size;
     private int particleDie;
     private String shape;
+
+    private Random rand;
 
     public Emitter(Point3D position, Vec3D speed, int count, float size, int particleDie) {
         this.position = position;
@@ -24,14 +27,23 @@ public class Emitter {
     public Emitter() {
         position = new Point3D(0,0,0);
         speed = new Vec3D(0,0,0.5);
-        count = 20;
-        size = 5;
-        particleDie = 2;
+        count = 500;
+        size = 10;
+        particleDie = 3;
         shape = "Point";
     }
 
     public Point3D getPosition() {
         return position;
+    }
+
+    public Point3D getRndPos(int radius){
+        rand = new Random();
+        float rndX = (rand.nextFloat()*radius)-radius/2;
+        rand = new Random();
+        float rndY = (rand.nextFloat()*radius)-radius/2;
+        //System.out.println(new Point3D(getPosition().getX()+rndX,getPosition().getY()+rndY,getPosition().getZ()));
+        return new Point3D(getPosition().getX()+rndX,getPosition().getY()+rndY,getPosition().getZ());
     }
 
     public void setPosition(Point3D position) {
@@ -40,6 +52,15 @@ public class Emitter {
 
     public Vec3D getSpeed() {
         return speed;
+    }
+
+    public Vec3D getRndSpeed(){
+        rand = new Random();
+        float rndX = (rand.nextFloat()*0.1f)-0.05f;
+        float rndY = (rand.nextFloat()*0.1f)-0.05f;
+        float rndZ = (rand.nextFloat()*(-0.25f))+(float) getSpeed().getZ();
+        //System.out.println(new Vec3D(rndX,rndY,rndZ));
+        return new Vec3D(rndX,rndY,rndZ);
     }
 
     public float getSize() {
