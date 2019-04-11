@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1545e23a-99d4-416a-a5ba-72af168a291a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/particleSystem/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/particleSystem/Emitter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/particleSystem/Renderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl01start/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl01start/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl01start/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl01start/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl02elements/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl02elements/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl02elements/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl02elements/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl03transforms/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl03transforms/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl03transforms/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl03transforms/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl04light/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl04light/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl04light/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl04light/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl05texture/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl05texture/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl05texture/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl05texture/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl06pushpopclip/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl06pushpopclip/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl06pushpopclip/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl06pushpopclip/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl07viewport/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl07viewport/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl07viewport/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl07viewport/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl08camerasky/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl08camerasky/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl08camerasky/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl08camerasky/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl09objectarrays/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl09objectarrays/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl09objectarrays/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl09objectarrays/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl10directionlight/JOGLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl10directionlight/JOGLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/jogl10directionlight/TestRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/jogl10directionlight/TestRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/src/jogl01start/TestRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/src/jogl01start/TestRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/src/jogl03transforms/TestRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/src/jogl03transforms/TestRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/flame_grad.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/res/flame_grad.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +43,41 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1319890138">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="18" />
+          <entry key="java" value="18" />
+          <entry key="jpg" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="18" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="18" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="5699" />
+          <entry key="txt" value="32" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="5699" />
+          <entry key="PLAIN_TEXT" value="32" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
@@ -80,35 +86,58 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/particleSystem/App.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="578">
-                  <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
+                <state relative-caret-position="940">
+                  <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1536#1791#0" expanded="true" />
-                    <element signature="e#1790#1791#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/particleSystem/Renderer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
-                  <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#2053#2067#0" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/particleSystem/Particle.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="840">
+                  <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#744#745#0" expanded="true" />
+                    <element signature="e#772#773#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/particleSystem/World.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/particleSystem/Renderer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3240">
+                  <caret line="180" column="49" selection-start-line="180" selection-start-column="49" selection-end-line="180" selection-end-column="49" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/particleSystem/Emitter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+                <state relative-caret-position="540">
+                  <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -116,12 +145,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/jogl03transforms/TestRenderer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1156">
-                  <caret line="125" column="38" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="38" />
+                <state relative-caret-position="1360">
+                  <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -130,10 +159,31 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/jogl05texture/TestRenderer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="190">
+                  <caret line="149" column="79" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="79" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/jogl07viewport/TestRenderer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1292">
+                <state relative-caret-position="200">
                   <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/jogl04light/JOGLApp.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1140">
+                  <caret line="66" column="9" selection-start-line="44" selection-start-column="12" selection-end-line="66" selection-end-column="9" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -157,9 +207,13 @@
       <list>
         <option value="$PROJECT_DIR$/src/particleSystem/Render.java" />
         <option value="$PROJECT_DIR$/src/particleSystem/Applet.java" />
-        <option value="$PROJECT_DIR$/src/particleSystem/App.java" />
         <option value="$PROJECT_DIR$/src/jogl03transforms/TestRenderer.java" />
+        <option value="$PROJECT_DIR$/src/particleSystem/App.java" />
+        <option value="$PROJECT_DIR$/src/particleSystem/Particle.java" />
+        <option value="$PROJECT_DIR$/src/jogl05texture/TestRenderer.java" />
         <option value="$PROJECT_DIR$/src/particleSystem/Renderer.java" />
+        <option value="$PROJECT_DIR$/src/particleSystem/World.java" />
+        <option value="$PROJECT_DIR$/src/particleSystem/Emitter.java" />
       </list>
     </option>
   </component>
@@ -179,35 +233,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="openGL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="openGL" type="462c0819:PsiDirectoryNode" />
+              <item name="openGL2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openGL2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="openGL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="openGL" type="462c0819:PsiDirectoryNode" />
+              <item name="openGL2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openGL2" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="openGL2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openGL2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="openGL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="openGL" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="jogl03transforms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="openGL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="openGL" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="jogl07viewport" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="openGL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="openGL" type="462c0819:PsiDirectoryNode" />
+              <item name="openGL2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openGL2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="particleSystem" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -215,13 +261,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Course" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="sett&#9;ACTION&#9;Database.Settings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554668157712" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554911994281" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -257,6 +305,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JOGLApp (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jogl05texture.JOGLApp" />
+      <module name="jogl-samples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jogl05texture.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JOGLApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jogl03transforms.JOGLApp" />
       <module name="jogl-samples" />
@@ -281,11 +342,13 @@
       <item itemvalue="Application.ParticleSystem" />
       <item itemvalue="Application.JOGLApp" />
       <item itemvalue="Application.JOGLApp (1)" />
+      <item itemvalue="Application.JOGLApp (2)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JOGLApp (1)" />
+        <item itemvalue="Application.JOGLApp (2)" />
         <item itemvalue="Application.JOGLApp" />
+        <item itemvalue="Application.JOGLApp (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -302,17 +365,34 @@
       <workItem from="1553083058317" duration="2493000" />
       <workItem from="1554374893673" duration="84000" />
       <workItem from="1554374991544" duration="12178000" />
+      <workItem from="1554668000607" duration="34714000" />
+      <workItem from="1554965037675" duration="874000" />
     </task>
+    <task id="LOCAL-00001" summary="shooting points">
+      <created>1554727211620</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554727211620</updated>
+    </task>
+    <task id="LOCAL-00002" summary="make it rain bish">
+      <created>1554840089022</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554840089022</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14755000" />
+    <option name="totallyTimeSpent" value="50343000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.122068234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.124200426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -321,17 +401,17 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1735358" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.14642082" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.22342733" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38503253" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286334" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.1735358" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.3286334" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -349,6 +429,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="shooting points" />
+    <MESSAGE value="make it rain bish" />
+    <option name="LAST_COMMIT_MESSAGE" value="make it rain bish" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/jogl04light/TestRenderer.java">
@@ -372,16 +457,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/particleSystem/Applet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/particleSystem/Applet.java" />
     <entry file="file://$PROJECT_DIR$/src/jogl01start/TestRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -389,13 +465,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../jogamp-all-platforms/jar/jogl-all.jar!/jogamp/opengl/gl4/GL4bcImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14235">
-          <caret line="1205" column="52" selection-start-line="1205" selection-start-column="52" selection-end-line="1205" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jogamp-all-platforms/jar/jogl-all.jar!/jogamp/opengl/gl4/GL4bcImpl.class" />
     <entry file="file://$PROJECT_DIR$/src/jogl03transforms/JOGLApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -408,35 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/particleSystem/Emitter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/particleSystem/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1536#1791#0" expanded="true" />
-            <element signature="e#1790#1791#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogl03transforms/TestRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="125" column="38" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jogl07viewport/JOGLApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -444,20 +485,232 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogl07viewport/TestRenderer.java">
+    <entry file="file://$PROJECT_DIR$/src/jogl09objectarrays/TestRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1292">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        <state relative-caret-position="-10320">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/gluegen.jar!/com/jogamp/common/util/PropertyAccess.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/jogl-all.jar!/jogamp/opengl/Debug.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/gluegen.jar!/jogamp/common/util/locks/RecursiveThreadGroupLockImpl01Unfairish.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/GLProfile.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="588" selection-start-line="588" selection-end-line="588" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/gluegen.jar!/jogamp/common/util/locks/RecursiveLockImpl01Unfairish.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/nativewindow/awt/JAWTWindow.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="770" selection-start-line="770" selection-end-line="770" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/jogl-all.jar!/jogamp/opengl/FPSCounterImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/util/AnimatorBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="419" selection-start-line="419" selection-end-line="419" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/util/FPSAnimator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/jogl-all.jar!/jogamp/nativewindow/SurfaceScaleUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/util/AWTAnimatorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/awt/GLCanvas.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="1316" selection-start-line="1316" selection-end-line="1316" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/jogl-all.jar!/jogamp/opengl/GLDrawableHelper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="519" selection-start-line="519" selection-end-line="519" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transforms/Col.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="188" selection-start-line="188" selection-end-line="188" />
+          <folding>
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4060#4061#0" expanded="true" />
+            <element signature="e#4197#4198#0" expanded="true" />
+            <element signature="e#4212#4213#0" expanded="true" />
+            <element signature="e#4363#4364#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transforms/Vec3D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5963">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transforms/Point3D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="125" column="18" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
+          <folding>
+            <element signature="e#2529#2530#0" expanded="true" />
+            <element signature="e#2544#2545#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/util/texture/Texture.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9000">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/GL2.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16241">
+          <caret line="1720" column="9" selection-start-line="1720" selection-start-column="9" selection-end-line="1720" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/particleSystem/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="940">
+          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/particleSystem/Particle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/particleSystem/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/particleSystem/Renderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
+        <state relative-caret-position="3240">
+          <caret line="180" column="49" selection-start-line="180" selection-start-column="49" selection-end-line="180" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2053#2067#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogl03transforms/TestRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogl07viewport/TestRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogl04light/JOGLApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="66" column="9" selection-start-line="44" selection-start-column="12" selection-end-line="66" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogl05texture/TestRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="149" column="79" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/Bez názvu-1 – obnovený.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/particleSystem/Emitter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

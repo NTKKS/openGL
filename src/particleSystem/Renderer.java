@@ -36,10 +36,10 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     float uhel = 0;
 
     Emitter emitter;
-    Particle particle;
     List<Particle> particles;
     World world;
     Vec3D gravity;
+    Vec3D wind;
     float time = 0;
     int sec = 0;
 
@@ -75,11 +75,12 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         gl.glGetFloatv(GL2.GL_MODELVIEW_MATRIX, m, 0);
 
 
-        world = new World();
-        gravity = world.getGRAVITY();
-        particles = new ArrayList<>();
         //emitter = new Emitter(new Point3D(0,0,0),new Vec3D(0,0,1),5,5, 4);
         emitter = new Emitter();
+        world = new World(emitter);
+        gravity = world.getGRAVITY();
+        wind = world.getWind();
+        particles = new ArrayList<>();
         //particle = new Particle(emitter.getPosition(),emitter.getSpeed(),"Point",1);
 
         System.out.println("Loading texture...");
@@ -177,9 +178,16 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
 
         //create particle every second
         if (sec!=(int)time&&particles.size()<emitter.getCount()){
-            addParticle();
+            for (int i = 0; i <= 10; i++) {
+                addParticle();
+            }
             System.out.println(particles.size());
         }
+
+        if ((int)time%5==sec%5){
+            wind = world.getWind();
+        }
+
         //for every particle do
         for (int i = 0; i <particles.size() ; i++) {
 
@@ -190,7 +198,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             gl.glEnable(GL2.GL_TEXTURE_2D);
             gl.glDisable(GL2.GL_LIGHTING);
             gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_MODE, GL2.GL_REPLACE);
-            gl.glTexCoord2f((float) (p.getAge()/emitter.getParticleDie()),1.0f);
+            gl.glTexCoord2f((float) (p.getAge()/p.getPtDie()),1.0f);
 
             gl.glEnable(GL.GL_BLEND);
             gl.glBlendFunc(GL.GL_SRC_ALPHA,GL.GL_ONE);
@@ -205,16 +213,21 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             Point3D pPos = p.getPosition();
             gl.glVertex3f((float)pPos.getX(), (float)pPos.getY(),(float)pPos.getZ());
             gl.glEnd();
-            //change speed, apply gravity
-            Vec3D newSpeed = p.getSpeed().add(gravity);
+            //change speed, apply gravity, central force
+            Vec3D newSpeed = p.getSpeed().add(wind).add(world.getCentralForce(p));
+            if (p.getPosition().getZ()>0){
+                newSpeed.add(gravity);
+            }
             p.setSpeed(newSpeed);
             Point3D actual = p.getPosition();
             p.setPosition(new Point3D(actual.getX()+newSpeed.getX(),actual.getY()+newSpeed.getY(),actual.getZ()+newSpeed.getZ()));
+
             //particle die
             p.setAge(p.getAge()+fps*0.001);
-            if (p.getAge()>emitter.getParticleDie()){
+            if (p.getAge()>p.getPtDie()){
                 p.setAge(0);
-                p.setPosition(emitter.getRndPos(5));
+                p.setPtDie(emitter.getRndPDie());
+                p.setPosition(emitter.getRndPos(8));
                 p.setSpeed(emitter.getRndSpeed());
             }
 
@@ -223,20 +236,13 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             gl.glDisable(GL2.GL_TEXTURE_2D);
         }
 
-        /*
-        gl.glColor3f(1.0f,1.0f,0.0f);
-        gl.glPointSize(5.0f);
-        gl.glBegin(GL2.GL_POINTS);
-        gl.glVertex3f(3.0f, 3.0f,(float)ptPos.getZ());
-        gl.glEnd();
-        */
         sec = (int)time;
 
         //.........................................................
     }
 
     private void addParticle() {
-        particles.add(new Particle(emitter.getRndPos(5),emitter.getRndSpeed(),emitter.getShape(),emitter.getSize()));
+        particles.add(new Particle(emitter.getRndPos(8),emitter.getRndPDie(),emitter.getRndSpeed(),emitter.getShape(),emitter.getSize()));
     }
 
     @Override

@@ -9,14 +9,16 @@ public class Particle {
 
     private Point3D position;
     private double age;
+    private int pDie;
     private Vec3D speed;
     private String shape;
     private double size;
     private Col color;
 
-    public Particle(Point3D position, Vec3D speed, String shape, double size) {
+    public Particle(Point3D position, int pDie, Vec3D speed, String shape, double size) {
         this.position = position;
         age = 0;
+        this.pDie = pDie;
         this.speed = speed;
         this.shape = shape;
         this.size = size;
@@ -66,5 +68,21 @@ public class Particle {
     public Col getColor(Texture tex) {
         Col flame = new Col();
         return color;
+    }
+
+    public int getPtDie() {
+        return pDie;
+    }
+
+    public void setPtDie(int pDie) {
+        this.pDie = pDie;
+    }
+
+    public Col getColor() {
+        return color;
+    }
+
+    public void setColor(Col color) {
+        this.color = color;
     }
 }

@@ -27,8 +27,8 @@ public class Emitter {
     public Emitter() {
         position = new Point3D(0,0,0);
         speed = new Vec3D(0,0,0.5);
-        count = 500;
-        size = 10;
+        count = 1000;
+        size = 8;
         particleDie = 3;
         shape = "Point";
     }
@@ -58,7 +58,7 @@ public class Emitter {
         rand = new Random();
         float rndX = (rand.nextFloat()*0.1f)-0.05f;
         float rndY = (rand.nextFloat()*0.1f)-0.05f;
-        float rndZ = (rand.nextFloat()*(-0.25f))+(float) getSpeed().getZ();
+        float rndZ = (rand.nextFloat()*(-(float)getSpeed().getZ()))+(float) getSpeed().getZ();
         //System.out.println(new Vec3D(rndX,rndY,rndZ));
         return new Vec3D(rndX,rndY,rndZ);
     }
@@ -99,4 +99,9 @@ public class Emitter {
         this.shape = shape;
     }
 
+    public int getRndPDie() {
+        rand = new Random();
+        int die = (int)(rand.nextFloat()*particleDie);
+        return die;
+    }
 }
