@@ -28,6 +28,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     long oldmils;
     long oldFPSmils;
     double	fps;
+    float radius;
 
     float m[] = new float[16];
     boolean per = true;
@@ -80,6 +81,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         world = new World(emitter);
         gravity = world.getGRAVITY();
         wind = world.getWind();
+        radius = emitter.getSize();
         particles = new ArrayList<>();
         //particle = new Particle(emitter.getPosition(),emitter.getSpeed(),"Point",1);
 
@@ -227,11 +229,12 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             if (p.getAge()>p.getPtDie()){
                 p.setAge(0);
                 p.setPtDie(emitter.getRndPDie());
-                p.setPosition(emitter.getRndPos(8));
+                p.setPosition(emitter.getRndPos((int)radius));
                 p.setSpeed(emitter.getRndSpeed());
             }
 
             gl.glBlendFunc(GL.GL_SRC_ALPHA,GL.GL_ONE_MINUS_SRC_ALPHA);
+            gl.glDisable(GL.GL_BLEND);
             gl.glEnable(GL.GL_DEPTH_TEST);
             gl.glDisable(GL2.GL_TEXTURE_2D);
         }
@@ -242,7 +245,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     }
 
     private void addParticle() {
-        particles.add(new Particle(emitter.getRndPos(8),emitter.getRndPDie(),emitter.getRndSpeed(),emitter.getShape(),emitter.getSize()));
+        particles.add(new Particle(emitter.getRndPos((int)radius),emitter.getRndPDie(),emitter.getRndSpeed(),emitter.getShape(),emitter.getSize()));
     }
 
     @Override
