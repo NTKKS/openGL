@@ -12,7 +12,6 @@ public class Particle {
     private int pDie;
     private Vec3D speed;
     private String shape;
-    private double size;
     private Col color;
 
     public Particle(Point3D position, int pDie, Vec3D speed, String shape, double size) {
@@ -21,7 +20,6 @@ public class Particle {
         this.pDie = pDie;
         this.speed = speed;
         this.shape = shape;
-        this.size = size;
         color = new Col(1.0f,1.0f,0.0f,1.0f);
     }
 
@@ -41,10 +39,6 @@ public class Particle {
         return shape;
     }
 
-    public double getSize() {
-        return size;
-    }
-
     public void setAge(double age) {
         this.age = age;
     }
@@ -55,10 +49,6 @@ public class Particle {
 
     public void setShape(String shape) {
         this.shape = shape;
-    }
-
-    public void setSize(double size) {
-        this.size = size;
     }
 
     public void setPosition(Point3D position) {

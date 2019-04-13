@@ -56,8 +56,8 @@ public class Emitter {
 
     public Vec3D getRndSpeed(){
         rand = new Random();
-        float rndX = (rand.nextFloat()*0.1f)-0.05f;
-        float rndY = (rand.nextFloat()*0.1f)-0.05f;
+        float rndX = (float)getSpeed().getX()+(rand.nextFloat()*0.1f)-0.05f;
+        float rndY = (float)getSpeed().getY()+(rand.nextFloat()*0.1f)-0.05f;
         float rndZ = (rand.nextFloat()*(-(float)getSpeed().getZ()))+(float) getSpeed().getZ();
         //System.out.println(new Vec3D(rndX,rndY,rndZ));
         return new Vec3D(rndX,rndY,rndZ);

@@ -34,6 +34,7 @@ public class App {
             Renderer ren = new Renderer();
             canvas.addGLEventListener(ren);
             canvas.addMouseListener(ren);
+            canvas.addMouseWheelListener(ren);
             canvas.addMouseMotionListener(ren);
             canvas.addKeyListener(ren);
             canvas.setSize(512, 384);
