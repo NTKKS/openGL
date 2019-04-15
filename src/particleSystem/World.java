@@ -23,21 +23,21 @@ public class World {
         return GRAVITY;
     }
 
-    public Vec3D getCentralForce(Particle p) {
+    public Vec3D getCentralForce(Particle p, float mulCF) {
         Point3D pos = p.getPosition();
         float x;
         if (pos.getX() > emitter.getPosition().getX() + 2.5f && pos.getZ() > 1) {
-            x = -0.005f;
+            x = -0.005f*mulCF;
         } else if (pos.getX() < emitter.getPosition().getX() - 2.5f && pos.getZ() > 1) {
-            x = 0.005f;
+            x = 0.005f*mulCF;
         } else {
             x = 0;
         }
         float y;
         if (pos.getY() > emitter.getPosition().getY() + 2.5f && pos.getZ() > 1) {
-            y = -0.005f;
+            y = -0.005f*mulCF;
         } else if (pos.getY() < emitter.getPosition().getY() - 2.5f && pos.getZ() > 1) {
-            y = 0.005f;
+            y = 0.005f*mulCF;
         } else {
             y = 0;
         }
