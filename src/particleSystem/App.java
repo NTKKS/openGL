@@ -38,6 +38,7 @@ public class App {
             canvas.addMouseMotionListener(ren);
             canvas.addKeyListener(ren);
             canvas.setSize(512, 384);
+            canvas.setFocusable(true);
 
             testFrame.add(canvas);
 

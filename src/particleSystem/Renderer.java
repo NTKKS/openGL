@@ -12,8 +12,7 @@ import java.util.List;
 
 import com.jogamp.opengl.util.texture.Texture;
 import com.jogamp.opengl.util.texture.TextureIO;
-import transforms.Point3D;
-import transforms.Vec3D;
+import transforms.*;
 import utils.OglUtils;
 
 public class Renderer implements GLEventListener, MouseListener, MouseMotionListener, KeyListener, MouseWheelListener {
@@ -27,8 +26,9 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     float radius, pSize;
 
     float m[] = new float[16];
+    float n[] = new float[16];
     boolean per = true;
-    int width, height, dx, dy, ox, oy, zoom;
+    int width, height, dx, dy, ox, oy, ex, ey, zoom;
 
     Emitter emitter;
     List<Particle> particles;
@@ -36,7 +36,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     Vec3D gravity;
     Vec3D wind;
     float time = 0;
-    float timeMult, mulCF;
+    float timeMult, mulCF, windMul;
     int sec = 0;
 
     Texture texture;
@@ -71,13 +71,13 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         gl.glGetFloatv(GL2.GL_MODELVIEW_MATRIX, m, 0);
 
 
-        mulCF = timeMult = 1.0f;
+        mulCF = timeMult = windMul = 1.0f;
         //emitter = new Emitter(new Point3D(0,0,0),new Vec3D(0,0,1),5,5, 4);
         emitter = new Emitter();
         pSize = (int) emitter.getSize();
         world = new World(emitter);
         gravity = world.getGRAVITY();
-        wind = world.getWind();
+        wind = world.getWind(windMul);
         radius = emitter.getSize();
         particles = new ArrayList<>();
         //particle = new Particle(emitter.getPosition(),emitter.getSpeed(),"Point",1);
@@ -97,6 +97,8 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     @Override
     public void display(GLAutoDrawable glDrawable) {
 
+        //TODO switch na effectory a particleDie
+
         GL2 gl = glDrawable.getGL().getGL2();
 
         // vypocet fps, nastaveni rychlosti otaceni podle rychlosti prekresleni
@@ -108,7 +110,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         //System.out.println(fps);
         oldmils = mils;
 
-        time += fps * 0.005*timeMult;
+        time += fps * 0.005 * timeMult;
         //System.out.println(time);
 
         gl.glEnable(gl.GL_DEPTH_TEST);
@@ -195,9 +197,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             //System.out.println(particles.size());
         }
 
-        if ((int) time % 5 == sec % 5) {
-            wind = world.getWind();
-        }
+        wind = world.getWind(windMul);
 
         //for every particle do
         for (int i = 0; i < particles.size(); i++) {
@@ -225,7 +225,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             gl.glVertex3f((float) pPos.getX(), (float) pPos.getY(), (float) pPos.getZ());
             gl.glEnd();
             //change speed, apply gravity, central force
-            Vec3D newSpeed = p.getSpeed().add(wind).add(world.getCentralForce(p,mulCF));
+            Vec3D newSpeed = p.getSpeed().add(wind).add(world.getCentralForce(p, mulCF));
             if (p.getPosition().getZ() > 0) {
                 newSpeed.add(gravity);
             }
@@ -234,7 +234,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             p.setPosition(new Point3D(actual.getX() + newSpeed.getX(), actual.getY() + newSpeed.getY(), actual.getZ() + newSpeed.getZ()));
 
             //particle die
-            p.setAge(p.getAge() + fps * 0.001*timeMult);
+            p.setAge(p.getAge() + fps * 0.001 * timeMult);
             if (p.getAge() > p.getPtDie()) {
                 p.setAge(0);
                 p.setPtDie(emitter.getRndPDie());
@@ -253,11 +253,11 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         //.........................................................
 
         //draw statistics
-        String text = new String(this.getClass().getName() + ": [Mouse] [M]ode: "
-                + " ");
+        String text = new String("pDie: " + emitter.getParticleDie() + " | Vel: "
+                + emitter.getSpeed().getZ() + " | CentralForce: " + mulCF + " | WindForce: " + windMul);
         String fpsStat = new String("FPS: " + String.valueOf((int) fps));
         String ptStat = new String("pCount: " + String.valueOf(particles.size()));
-        //OglUtils.drawStr2D(glDrawable, 3, height-20, text);
+        OglUtils.drawStr2D(glDrawable, 3, height - 20, text);
         OglUtils.drawStr2D(glDrawable, width - 50, 10, fpsStat);
         OglUtils.drawStr2D(glDrawable, width - 130, 10, ptStat);
     }
@@ -287,6 +287,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     @Override
     public void keyPressed(KeyEvent e) {
 
+
     }
 
     @Override
@@ -296,23 +297,23 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
                 per = !per;
                 break;
             case KeyEvent.VK_O:
-                timeMult*=2f;
+                timeMult *= 2f;
                 break;
             case KeyEvent.VK_I:
-                timeMult*=0.5f;
+                timeMult *= 0.5f;
                 break;
             case KeyEvent.VK_L:
-                mulCF*=2f;
+                mulCF *= 2f;
                 break;
             case KeyEvent.VK_K:
-                mulCF*=0.5f;
+                mulCF *= 0.5f;
                 break;
             case KeyEvent.VK_NUMPAD9:
-                emitter.setSize(emitter.getSize()*1.5f);
+                emitter.setSize(emitter.getSize() * 1.5f);
                 radius = emitter.getSize();
                 break;
             case KeyEvent.VK_NUMPAD8:
-                emitter.setSize(emitter.getSize()*0.75f);
+                emitter.setSize(emitter.getSize() * 0.75f);
                 radius = emitter.getSize();
                 break;
             case KeyEvent.VK_NUMPAD6:
@@ -320,6 +321,18 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
                 break;
             case KeyEvent.VK_NUMPAD5:
                 emitter.setSpeed(emitter.getSpeed().mul(0.75));
+                break;
+            case KeyEvent.VK_NUMPAD3:
+                emitter.setParticleDie(emitter.getParticleDie() + 1);
+                break;
+            case KeyEvent.VK_NUMPAD2:
+                emitter.setParticleDie(emitter.getParticleDie() - 1);
+                break;
+            case KeyEvent.VK_M:
+                windMul += 1;
+                break;
+            case KeyEvent.VK_N:
+                windMul -= 1;
                 break;
         }
     }
@@ -331,8 +344,8 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
 
     @Override
     public void mousePressed(MouseEvent e) {
-        if (e.getButton() == MouseEvent.BUTTON1)
-            ox = e.getX();
+        //if (e.getButton() == MouseEvent.BUTTON1){}
+        ox = e.getX();
         oy = e.getY();
 
     }
@@ -357,6 +370,12 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         if (e.getModifiersEx() == MouseEvent.BUTTON1_DOWN_MASK) {
             dx = e.getX() - ox;
             dy = e.getY() - oy;
+            ox = e.getX();
+            oy = e.getY();
+        }
+        if (e.getModifiersEx() == MouseEvent.BUTTON3_DOWN_MASK) {
+            ex = e.getX() - ox;
+            ey = e.getY() - oy;
             ox = e.getX();
             oy = e.getY();
         }
