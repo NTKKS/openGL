@@ -12,7 +12,7 @@ public class World {
     private Emitter emitter;
     private Vec3D wind;
 
-    private Random rand;
+    private Random rand = new Random();
 
     public World(Emitter emitter) {
         this.emitter = emitter;
@@ -46,9 +46,7 @@ public class World {
     }
 
     public Vec3D getWind(float mul) {
-        rand = new Random();
         double x = (rand.nextDouble() * 0.01*mul) - 0.005*mul;
-        rand = new Random();
         double y = (rand.nextDouble() * 0.01*mul) - 0.005*mul;
         double my = 0;
         double mx = 0;

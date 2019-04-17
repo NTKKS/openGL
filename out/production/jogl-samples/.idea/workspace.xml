@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="jogl-samples:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1545e23a-99d4-416a-a5ba-72af168a291a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jogl-samples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jogl-samples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/particleSystem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/particleSystem/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/particleSystem/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/particleSystem/Renderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/particleSystem/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/particleSystem/World.java" afterDir="false" />
@@ -276,7 +282,7 @@
     <property name="SearchEverywhereHistoryKey" value="sett&#9;ACTION&#9;Database.Settings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555406156390" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555406443496" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Z-buffer" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -1226,10 +1232,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100800000" />
+    <option name="totallyTimeSpent" value="101087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12313433" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1508,10 +1515,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>jogl-samples:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

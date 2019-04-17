@@ -72,7 +72,6 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
 
 
         mulCF = timeMult = windMul = 1.0f;
-        //emitter = new Emitter(new Point3D(0,0,0),new Vec3D(0,0,1),5,5, 4);
         emitter = new Emitter();
         pSize = (int) emitter.getSize();
         world = new World(emitter);
@@ -80,7 +79,6 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         wind = world.getWind(windMul);
         radius = emitter.getSize();
         particles = new ArrayList<>();
-        //particle = new Particle(emitter.getPosition(),emitter.getSpeed(),"Point",1);
 
         System.out.println("Loading texture...");
         InputStream is = getClass().getResourceAsStream("/flame_grad.jpg"); // vzhledem k adresari res v projektu

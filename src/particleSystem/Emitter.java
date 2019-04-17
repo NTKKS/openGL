@@ -14,7 +14,7 @@ public class Emitter {
     private int particleDie;
     private String shape;
 
-    private Random rand;
+    private Random rand = new Random();
 
     public Emitter(Point3D position, Vec3D speed, int count, float size, int particleDie) {
         this.position = position;
@@ -38,9 +38,7 @@ public class Emitter {
     }
 
     public Point3D getRndPos(int radius){
-        rand = new Random();
         float rndX = (rand.nextFloat()*radius)-radius/2;
-        rand = new Random();
         float rndY = (rand.nextFloat()*radius)-radius/2;
         //System.out.println(new Point3D(getPosition().getX()+rndX,getPosition().getY()+rndY,getPosition().getZ()));
         return new Point3D(getPosition().getX()+rndX,getPosition().getY()+rndY,getPosition().getZ());
@@ -55,7 +53,6 @@ public class Emitter {
     }
 
     public Vec3D getRndSpeed(){
-        rand = new Random();
         float rndX = (float)getSpeed().getX()+(rand.nextFloat()*0.1f)-0.05f;
         float rndY = (float)getSpeed().getY()+(rand.nextFloat()*0.1f)-0.05f;
         float rndZ = (rand.nextFloat()*(-(float)getSpeed().getZ()))+(float) getSpeed().getZ();
@@ -100,8 +97,7 @@ public class Emitter {
     }
 
     public int getRndPDie() {
-        rand = new Random();
-        int die = (int)(rand.nextFloat()*particleDie);
+        int die = (int)(rand.nextFloat()*particleDie+1);
         return die;
     }
 }
