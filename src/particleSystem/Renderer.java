@@ -223,10 +223,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             gl.glVertex3f((float) pPos.getX(), (float) pPos.getY(), (float) pPos.getZ());
             gl.glEnd();
             //change speed, apply gravity, central force
-            Vec3D newSpeed = p.getSpeed().add(wind).add(world.getCentralForce(p, mulCF));
-            if (p.getPosition().getZ() > 0) {
-                newSpeed.add(gravity);
-            }
+            Vec3D newSpeed = p.getSpeed().add(wind).add(world.getCentralForce(p, mulCF)).add(gravity);
             p.setSpeed(newSpeed);
             Point3D actual = p.getPosition();
             p.setPosition(new Point3D(actual.getX() + newSpeed.getX(), actual.getY() + newSpeed.getY(), actual.getZ() + newSpeed.getZ()));
