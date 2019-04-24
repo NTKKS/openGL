@@ -309,10 +309,13 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             case KeyEvent.VK_NUMPAD9:
                 emitter.setSize(emitter.getSize() * 1.5f);
                 radius = emitter.getSize();
+                emitter.setCount((int) (emitter.getCount()*1.5f));
                 break;
             case KeyEvent.VK_NUMPAD8:
                 emitter.setSize(emitter.getSize() * 0.75f);
                 radius = emitter.getSize();
+                particles = new ArrayList<>();
+                emitter.setCount((int) (emitter.getCount()*0.75f));
                 break;
             case KeyEvent.VK_NUMPAD6:
                 emitter.setSpeed(emitter.getSpeed().mul(1.5));
