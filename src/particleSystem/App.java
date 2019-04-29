@@ -17,7 +17,7 @@ public class App {
 
     public void start() {
         try {
-            Frame testFrame = new Frame("ImageBuffer");
+            Frame testFrame = new Frame("Particle System");
             testFrame.setSize(512, 384);
 
             // setup OpenGL v2
@@ -61,7 +61,7 @@ public class App {
             testFrame.setVisible(true);
             animator.start(); // start the animation loop
 
-            JFrame descr = new JFrame("Description:");
+            JFrame descr = new JFrame("Projekt: Částicový systém");
             JOptionPane.showMessageDialog(descr,
                     "LMB - camera rotation\n" +
                             "8,9 - emitter size\n" +
@@ -71,7 +71,7 @@ public class App {
                             "K,L - central force\n" +
                             "M,N - wind force\n\n" +
                             "Jan Janás, PGRF2, Duben 2019",
-                    "Description:",JOptionPane.PLAIN_MESSAGE);
+                    "Projekt: Částicový systém",JOptionPane.PLAIN_MESSAGE);
 
         } catch (Exception e) {
             e.printStackTrace();

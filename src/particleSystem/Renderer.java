@@ -273,7 +273,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     public void reshape(GLAutoDrawable glDrawable, int x, int y, int width, int height) {
         this.width = width;
         this.height = height;
-        pSize = emitter.getSize() * (height / 384.0f); //TODO how do I get init height?
+        pSize = emitter.getSize() * (height / 384.0f);
         glDrawable.getGL().getGL2().glViewport(0, 0, width, height);
     }
 
@@ -392,14 +392,6 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             azimut = azimut % 360;
             a_rad = azimut * Math.PI / 180;
             z_rad = zenit * Math.PI / 180;
-            /*
-            ex = Math.sin(a_rad) * Math.cos(z_rad);
-            ey = Math.sin(z_rad);
-            ez = -Math.cos(a_rad) * Math.cos(z_rad);
-            ux = Math.sin(a_rad) * Math.cos(z_rad + Math.PI / 2);
-            uy = Math.sin(z_rad + Math.PI / 2);
-            uz = -Math.cos(a_rad) * Math.cos(z_rad + Math.PI / 2);
-            */
         }
         if (e.getModifiersEx() == MouseEvent.BUTTON3_DOWN_MASK) {
             ex = e.getX() - ox;
