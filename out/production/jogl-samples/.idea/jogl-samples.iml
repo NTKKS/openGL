@@ -15,9 +15,11 @@
           <root url="jar://U:/jogamp-all-platforms/jar/jogl-all.jar!/" />
           <root url="file://U:/openGL/_JOGL/jogamp-all-platforms/jar" />
           <root url="file://U:/_JOGL/jogamp-all-platforms/jar" />
+          <root url="file://$MODULE_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../openGL/_JOGL/jogamp-all-platforms/jar" recursive="false" />
         <jarDirectory url="file://U:/_JOGL/jogamp-all-platforms/jar" recursive="false" />
         <jarDirectory url="file://U:/openGL/_JOGL/jogamp-all-platforms/jar" recursive="false" />
       </library>

@@ -28,7 +28,11 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     float m[] = new float[16];
     float n[] = new float[16];
     boolean per = true;
-    int width, height, dx, dy, ox, oy, ex, ey, zoom;
+    int width, height, dx, dy, ox, oy, ex, ey, ez, ux, uy, uz,movX, zoom;
+    double px,py,pz,vx,vy,vz;
+    float zenit;
+    float azimut;
+    double a_rad, z_rad;
 
     Emitter emitter;
     List<Particle> particles;
@@ -71,6 +75,12 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
         gl.glGetFloatv(GL2.GL_MODELVIEW_MATRIX, m, 0);
 
 
+        px=50;
+        py=25;
+        pz=20;
+        vx=Math.sin(azimut)*Math.cos(zenit);
+        vy=Math.sin(zenit);
+        vz=-Math.cos(azimut)*Math.cos(zenit);
         mulCF = timeMult = windMul = 1.0f;
         emitter = new Emitter();
         pSize = (int) emitter.getSize();
@@ -213,7 +223,7 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             gl.glBlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE);
             gl.glDisable(GL.GL_DEPTH_TEST);
             //.................................
-
+            
             //gl.glColor3d(p.getColor(texture).getR(),p.getColor(texture).getG(),p.getColor(texture).getB());
             gl.glPointSize(pSize);
             //gl.glPointSize(20);
@@ -281,7 +291,11 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
 
     @Override
     public void keyPressed(KeyEvent e) {
-
+        switch (e.getKeyCode()){
+            case KeyEvent.VK_W:
+                movX=1;
+                break;
+        }
 
     }
 
@@ -370,6 +384,24 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
             dy = e.getY() - oy;
             ox = e.getX();
             oy = e.getY();
+
+            zenit += dy;
+            if (zenit > 90)
+                zenit = 90;
+            if (zenit <= -90)
+                zenit = -90;
+            azimut += dx;
+            azimut = azimut % 360;
+            a_rad = azimut * Math.PI / 180;
+            z_rad = zenit * Math.PI / 180;
+            /*
+            ex = Math.sin(a_rad) * Math.cos(z_rad);
+            ey = Math.sin(z_rad);
+            ez = -Math.cos(a_rad) * Math.cos(z_rad);
+            ux = Math.sin(a_rad) * Math.cos(z_rad + Math.PI / 2);
+            uy = Math.sin(z_rad + Math.PI / 2);
+            uz = -Math.cos(a_rad) * Math.cos(z_rad + Math.PI / 2);
+            */
         }
         if (e.getModifiersEx() == MouseEvent.BUTTON3_DOWN_MASK) {
             ex = e.getX() - ox;

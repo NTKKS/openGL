@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
 public class App {
 
@@ -61,6 +61,17 @@ public class App {
             testFrame.setVisible(true);
             animator.start(); // start the animation loop
 
+            JFrame descr = new JFrame("Description:");
+            JOptionPane.showMessageDialog(descr,
+                    "LMB - camera rotation\n" +
+                            "8,9 - emitter size\n" +
+                            "5,6 - emitter velocity\n" +
+                            "2,3 - particle die\n" +
+                            "I,O - time scale\n" +
+                            "K,L - central force\n" +
+                            "M,N - wind force\n\n" +
+                            "Jan Janás, PGRF2, Duben 2019",
+                    "Description:",JOptionPane.PLAIN_MESSAGE);
 
         } catch (Exception e) {
             e.printStackTrace();
