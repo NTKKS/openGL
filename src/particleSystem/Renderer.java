@@ -105,8 +105,6 @@ public class Renderer implements GLEventListener, MouseListener, MouseMotionList
     @Override
     public void display(GLAutoDrawable glDrawable) {
 
-        //TODO switch na effectory a particleDie
-
         GL2 gl = glDrawable.getGL().getGL2();
 
         // vypocet fps, nastaveni rychlosti otaceni podle rychlosti prekresleni
